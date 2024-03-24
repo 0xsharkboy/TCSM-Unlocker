@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>TCSM_Unlocker</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <ApplicationIcon>Unlocker.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="GL\**" />
+    <EmbeddedResource Remove="GL\**" />
+    <None Remove="GL\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Unlocker.ico" />
+  </ItemGroup>
+
+</Project>
