@@ -40,10 +40,6 @@
                 {
                     lines[i] = "Exe = "+ get_steam_path();
                 }
-                if (lines[i].StartsWith("Dll"))
-                {
-                    lines[i] = "Dll = " + Directory.GetCurrentDirectory() + @"\GL\GreenLuma_2024_x86.dll";
-                }
             }
             using (StreamWriter writer = new StreamWriter(filePath))
             {
