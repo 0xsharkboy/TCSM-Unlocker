@@ -7,4 +7,4 @@
 
 ## Features
  - [x] Inject DLCs in steam
- - [ ] Auto update DLC list
+ - [x] Auto update DLC list

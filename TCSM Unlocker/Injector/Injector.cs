@@ -6,7 +6,7 @@ namespace TCSM_Unlocker
     {
         public void Setup()
         {
-            ini_handler ini_handler = new ini_handler();
+            iniHandler ini_handler = new iniHandler();
 
             ini_handler.editIniVariable("GL\\DLLInjector.ini");
             Thread.Sleep(1000);
@@ -38,11 +38,14 @@ namespace TCSM_Unlocker
         public void Inject_steam()
         {
             Banner banner = new Banner();
+            updateDlcList updateDlcList = new updateDlcList();
 
             if (File.Exists(@"GL\DLLInjector.exe"))
             {
                 Directory.SetCurrentDirectory(Directory.GetCurrentDirectory() + @"\GL");
                 banner.print_banner();
+                Console.WriteLine("Updating DLC list...");
+                updateDlcList.updateDlcFromSteam();
                 Console.WriteLine("Injecting DLCs...");
                 Process.Start("DLLInjector.exe");
                 Thread.Sleep(1000);

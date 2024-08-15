@@ -1,6 +1,6 @@
 ﻿namespace TCSM_Unlocker
 {
-    internal class ini_handler
+    internal class iniHandler
     {
 
         private string get_steam_path()
